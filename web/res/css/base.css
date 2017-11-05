@@ -1,0 +1,15 @@
+.base_border_style {
+    border: 2px dashed red;
+}
+
+.toolmanagement-import {
+    cursor: pointer;
+}
+
+td {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+}

@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+        {#<p style="color: deeppink">#}
+            {#{{ user.name }}#}
+        {#</p>#}
+        {#<p style="color: deeppink">#}
+            {#{{ user.lastName }}#}
+        {#</p>        <p style="color: deeppink">#}
+            {#{{ user.address }}#}
+        {#</p>#}
+        {% if notes is defined %}
+            {% for note in notes %}
+                    <p>{{ note.note }}</p>
+            {% endfor %}
+        {% else %}
+            {% for user in users %}
+                <p>{{ user.name }}</p>
+                <p>{{ user.lastName }}</p>
+            {% endfor %}
+
+        {% endif %}
+
+</body>
+</html>

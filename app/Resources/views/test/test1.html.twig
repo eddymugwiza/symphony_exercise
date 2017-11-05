@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Welcome back {{ name }}</h1>
+
+    <h2>these are our notes:</h2>
+    <ul>
+    {%for note in notes%}
+        <li>{{note}}</li>
+    {%endfor%}
+    </ul>
+
+    <h2>{{ funFact|raw }}</h2>
+
+    <div id="container"></div>
+
+
+    <script id="note_links" type="text/template">
+        <div id="dynamic">
+            <button class="get_notes_button" type="button" class="btn btn-info">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+        </div>
+    </script>
+
+    <script id="notes" type="text/template">
+        <div id="dynamic">
+            <button class="load-notes" type="button" class="btn btn-info">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+        </div>
+    </script>
+
+    <script type="text/javascript">
+		var notesLink = '{{ path('get_notes',{'note': name }) }}';
+    </script>
+
+
+{% endblock body %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('res/css/base.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}
+    <script type = "text/javascript"
+            src = "{{ asset('res/js/lib/jquery.js') }}"></script>
+    <script type = "text/javascript"
+            src = "{{ asset('res/js/lib/Underscore.js') }}"></script>
+    <script type = "text/javascript"
+            src = "{{ asset('res/js/lib/Backbone.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('res/js/backbone/app.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('res/js/backbone/router.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('res/js/backbone/views/baseView.js') }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+    {#
+        here starts our backbone app
+    #}
+    <script>
+		//here we can start out app
+    </script>
+{% endblock %}
+</body>
+</html>

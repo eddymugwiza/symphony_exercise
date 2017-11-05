@@ -1,1 +1,36 @@
-<h1>The owner name : {{ name }}</h1>
+    {% extends 'base.html.twig' %}
+
+    {% block body %}
+
+        <h1>{{ header_text|raw }}</h1>
+        <h2>number of users : {{ number|number_format }}</h2>
+
+
+        <ul>
+        {% for note in notes %}
+            <li>{{ note|raw }}</li>
+        {% endfor %}
+        </ul>
+
+
+        <div>
+            <a href="{{ path('get_notes',{'note': name }) }}">link to notes</a>
+        </div>
+
+        <div id="container"></div>
+
+
+        <script id="note_links" type="text/template">
+            <div id="dynamic">
+                <button class="get_notes_button" type="button" class="btn btn-info">
+                    <span class="glyphicon glyphicon-search"></span> Search
+                </button>
+            </div>
+        </script>
+
+        <script type="text/javascript">
+            var notesLink = '{{ path('get_notes',{'note': name }) }}'
+        </script>
+
+    {% endblock %}
+

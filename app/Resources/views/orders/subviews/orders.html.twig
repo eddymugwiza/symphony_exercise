@@ -1,0 +1,21 @@
+
+
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Type</th>
+            <th>Created</th>
+            <th>User</th>
+        </tr>
+        {% for order in orders %}
+            <tr>
+                <td>{{order.id}}</td>
+                <td>{{order.created}}</td>
+                <td>{{order.type}}</td>
+                <td>{{order.user}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock body %}
